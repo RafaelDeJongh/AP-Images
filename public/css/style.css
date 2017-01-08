@@ -1,5 +1,23 @@
 @charset "utf-8";
-/*Body
+/** AP Images CSS - Created by: Rafael De Jongh
+
+Table of Content
+----------------
+- Global
+- Navigation
+- Content
+  - Drop-zone
+  - Magnific Popup
+- Forms
+- Google Ads
+- FadeInOnLoad
+- Footer
+- Media Queries
+- Links
+- Scrollbar
+- Selection
+----------------
+Global
 -------------*/
 body{
 	width:100%;
@@ -7,14 +25,21 @@ body{
 	background-color:#222;
 	color:#eee;
 }
-/*Nav
+/*Navigation
 -------------*/
 header{
 	display:block;
 	margin:auto;
 	padding:2em 5%;
 }
-header h1{
+#home{
+	display:block;
+	border:none
+}
+#home h1{
+	position:relative;
+	left:50px;
+	top:5px;
 	float:left;
 	font-variant:small-caps;
 	display:inline-block;
@@ -22,6 +47,25 @@ header h1{
 	font-size:1.5em;
 	width:auto;
 	margin:0;
+	-webkit-transition:opacity .3s ease-in-out;
+	   -moz-transition:opacity .3s ease-in-out;
+	     -o-transition:opacity .3s ease-in-out;
+	        transition:opacity .3s ease-in-out
+}
+#home:hover h1{color:#fff}
+#home h1:before{
+	content:"";
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url("../images/AP-Images-Logo.png");
+	background-image:url("../images/AP-Images-Logo.svg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+	position:absolute;
+	left:-55px;
+	top:-16px
 }
 nav{
 	height:100%;
@@ -373,6 +417,23 @@ footer{
 		margin:3px 5px;
 	}
 }
+@media screen and (max-width:420px){
+	#home{
+		margin:-5px auto 33px -50px;
+		text-align:center;
+	}
+	#home h1{
+		float:none;
+		top:0;
+	}
+	nav{justify-content:center}
+	nav a{
+		font-size:1.3em;
+		display:inline-block;
+	}
+	.uploadImage{padding:0}
+	main{margin:1.5em auto}
+}
 /*Links
 -------------*/
 a,a:visited{
@@ -393,9 +454,9 @@ a:active,a:hover{
 ::-webkit-scrollbar{width:12px;height:12px}
 ::-webkit-scrollbar-corner{background-color:#121212}
 ::-webkit-scrollbar-track{background-color:#121212}
-::-webkit-scrollbar-thumb{background:#900}
+::-webkit-scrollbar-thumb{background:#333}
 ::-webkit-scrollbar:horizontal{height:12px}
 /*Selection
 -------------*/
-::selection{color:#fff;background-color:#900}
 ::-moz-selection{color:#fff;background-color:#900}
+     ::selection{color:#fff;background-color:#900}
