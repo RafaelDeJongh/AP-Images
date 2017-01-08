@@ -13,15 +13,15 @@
 <meta property="og:description" content="AP Images is a Free, Fast and Secure lightweight uncompressed image uploader. Upload your .jpg, .png, .gif and .svg images up to 5 Megabyte each!">
 <meta property="og:url" content="{{url()->current()}}">
 <meta property="og:site_name" content="AP Images">
-<meta property="og:image" content="{{url()->current()}}/images/AP-Images-FB.jpg">
+<meta property="og:image" content="{{URL::to('/')}}/images/AP-Images-FB.jpg">
 <meta property="fb:app_id" content="1804288913166829"/>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:description" content="AP Images is a Free, Fast and Secure lightweight uncompressed image uploader. Upload your .jpg, .png, .gif and .svg images up to 5 Megabyte each!">
 <meta name="twitter:title" content="AP Images">
 <meta name="twitter:site" content="@Rafael_De_Jongh">
-<meta name="twitter:image" content="{{url()->current()}}/images/AP-Images-FB.jpg">
+<meta name="twitter:image" content="{{URL::to('/')}}/images/AP-Images-FB.jpg">
 <meta name="twitter:creator" content="@Rafael_De_Jongh">
-<link rel="canonical" href="{{url()->current()}}">
+<link rel="canonical" href="{{URL::to('/')}}">
 <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="images/favicon/favicon-194x194.png" sizes="194x194">
