@@ -11,10 +11,10 @@ Dropzone.options.imageUpload={
 	acceptedFiles:".jpeg,.jpg,.png,.gif,.svg",
 	dictDefaultMessage:"Paste, Drop or Select your Images here to Upload!",
 	dictResponseError:"An unexpected error occurred when uploading your file!",
-	addRemoveLinks:false, //Add Function To Remove Uploaded Image
+	dictFallbackMessage:"JavaScript has been disabled in your browser.\n This image uploader requires JavaScript to function properly.",
+	addRemoveLinks:false,
 	dictRemoveFile:'Remove Image',
 	success:function(file,response){
-		//console.log(response.success);
 		var gTime = new Date(),
 		y = gTime.getFullYear(),
 		m = ("0" + (gTime.getMonth() + 1)).slice(-2),
@@ -25,8 +25,10 @@ Dropzone.options.imageUpload={
 		'<div class="uploadImgSec">'
 			+'<a href="'+gFullPath+'" title="'+gServerPath+'" class="uploadedImg"><img src="'+gThumbPath+'" alt="'+response.success+'"/></a>'
 			+'<aside class="urlInfo">'
-				+'<a href="'+gServerPath+'" target="_blank" class="extlUrl"><i class="fa fa-external-link" aria-hidden="true"></i></a>'
-				+'<div class="URLBox"><input type="text" class="URLinfo" value="'+gServerPath+'"><button class="copyURL button">Copy</button></div>'
+				+'<div class="URLBox"><h3>Image Link <a href="'+gServerPath+'" target="_blank" class="extlUrl"><i class="fa fa-external-link" aria-hidden="true"></i></a></h3><input type="text" class="URLinfo" value="'+gServerPath+'" readonly><button class="copyURL button">Copy</button></div>' //Direct URL
+				+'<div class="URLBox"><h3>HTML Link</h3><input type="text" class="URLinfo" value="<a href=&quot;'+gServerPath+'&quot;><img src=&quot;'+gServerPath+'&quot; title=&quot;'+response.success+'&quot; alt=&quot;'+response.success+'&quot;/></a>" readonly><button class="copyURL button">Copy</button></div>' //HTML
+				+'<div class="URLBox"><h3>Markdown Link</h3><input type="text" class="URLinfo" value="!['+response.success+']('+gServerPath+' &quot;'+response.success+'&quot;)" readonly><button class="copyURL button">Copy</button></div>' //Markdown
+				+'<div class="URLBox"><h3>BBCode Link</h3><input type="text" class="URLinfo" value="[url='+gServerPath+'][img]'+gServerPath+'[/img][/url]" readonly><button class="copyURL button">Copy</button></div>' //BBCode
 			+'</aside>'
 		+'</div>'
 		);
@@ -46,7 +48,7 @@ $('.recentUploads,.uploadedImages').magnificPopup({
 	type:'image',
 	image: {
 		titleSrc: function(item) {
-			return '<a href="' + item.el.attr("title") + '" target="_blank" class="extlUrl"><i class="fa fa-external-link" aria-hidden="true"></i></a><div class="URLBox"><input type="text" class="URLinfo" value="' + item.el.attr("title") + '"/><button class="copyURL button">Copy</button></div>';
+			return '<a href="' + item.el.attr("title") + '" target="_blank" class="extlUrl"><i class="fa fa-external-link" aria-hidden="true"></i></a><div class="URLBox"><input type="text" class="URLinfo" value="' + item.el.attr("title") + '" readonly/><button class="copyURL button">Copy</button></div>';
 		}
 	},
 	gallery:{

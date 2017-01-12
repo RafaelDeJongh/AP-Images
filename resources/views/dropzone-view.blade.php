@@ -8,9 +8,10 @@
 	<span>Accepts: .jpg, .png, .gif and .svg images up to 5MB each.</span>
 </div>
 	<div class="fallback">
-		<input type="file" name="image" required>
+		<p>JavaScript has been disabled in your browser.</p>
+		<p>This image uploader requires JavaScript to function properly.</p>
+		<input type="file" name="file" required>
 		<input type="submit" value="Upload" name="submit">
-		<input type="hidden" value="{{csrf_token()}}" id="csrf-token" name="_token">
 	</div>
 {!!Form::close()!!}
 </section>

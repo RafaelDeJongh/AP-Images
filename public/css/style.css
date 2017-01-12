@@ -98,13 +98,17 @@ section{min-height:100%;height:auto}
 	clear:both;
 	width:100%;
 }
+.uploadImgSec:not(:first-child){
+	margin-top:1em;
+	padding-top:1em;
+	border-top:1px solid #2b2b2b
+}
 .uploadedImages{margin-top:2em}
 .uploadedImages a.uploadedImg{
 	width:30%;
 	height:26.66vw;
 	display:block;
 	border:none;
-	margin-bottom:1.5em;
 	float:left;
 }
 .uploadedImages a img{
@@ -121,7 +125,14 @@ aside.urlInfo{
 	align-items:center;
 	justify-content:center;
 	height:26.66vw;
+	flex-direction:column;
 }
+aside .URLBox{
+	top:0;
+	margin-bottom:8px;
+}
+.URLBox h3{font-size:20px}
+.URLBox h3 .extlUrl{font-size:18px}
 .recentUploads{display:inline-block}
 .recentUploads a{
 	float:left;
@@ -167,6 +178,12 @@ aside.urlInfo{
 	        border-radius:8px
 }
 .dropzone .fallback{margin:auto;text-align:center}
+.fallback p{
+	margin:.5em 0;
+	color:#bbb;
+	font-size:.9em;
+}
+.fallback input{margin-top:.5em}
 /*Magnific Popup
 --------------*/
 .mfp-title{
@@ -380,6 +397,13 @@ footer{
 @media screen and (max-width:1100px){
 	section.recentUploads a{width:25%;height:22.3vw}
 }
+@media screen and (max-width:980px){
+	aside.urlInfo{flex-flow:column wrap}
+	aside .URLBox{flex-basis:8.5vw}
+}
+@media screen and (max-width:850px){
+	aside .URLBox:nth-child(n+2){display:none}
+}
 @media screen and (max-width:800px){
 	section.recentUploads a{width:33.333%;height:29.5vw}
 	.recImg:nth-last-of-type(-n+2){display:none}
@@ -391,14 +415,21 @@ footer{
 @media screen and (max-width:500px){
 	section.recentUploads a{width:100%;height:88vw}
 	a.extlUrl{
-		display:block;
+		display:inline-block;
 		margin:0;
 		text-align:center;
 	}
+	.mfp-title a.extlUrl{
+		top:-25px;
+		left:8px;
+		position:relative;
+	}
+	.mfp-title .URLBox{top:-18px}
 	.URLBox{
 		display:block;
 		width:100%;
 	}
+	.URLBox h3{margin-left:5px}
 	aside.urlInfo{
 		margin:0;
 		flex-wrap:wrap;
@@ -408,7 +439,7 @@ footer{
 		-webkit-border-radius:3px;
 		   -moz-border-radius:3px;
 		        border-radius:3px;
-		margin:-20px 5px 0;
+		margin:0 5px 0;
 	}
 	button.copyURL{
 		width:100%;
