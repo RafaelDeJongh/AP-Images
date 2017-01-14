@@ -1,7 +1,6 @@
 //Dropzone
 var imageUpload;
 Dropzone.options.imageUpload={
-	init:function(){imageUpload = this;},
 	//forceFallback:true,
 	uploadMultiple:false,
 	parallelUploads:3,
@@ -14,7 +13,9 @@ Dropzone.options.imageUpload={
 	dictFallbackMessage:"JavaScript has been disabled in your browser.\n This image uploader requires JavaScript to function properly.",
 	addRemoveLinks:false,
 	dictRemoveFile:'Remove Image',
-	success:function(file,response){
+	init:function(){
+		imageUpload = this;
+		this.on("success",function(file,response){
 		var gTime = new Date(),
 		y = gTime.getFullYear(),
 		m = ("0" + (gTime.getMonth() + 1)).slice(-2),
@@ -36,7 +37,8 @@ Dropzone.options.imageUpload={
 			$(this).prev().focus().select();
 			document.execCommand("Copy",false,null);
 		});
-	}
+	});
+	},
 }
 $(document).fileClipboard({accept:'image/*',on:{load:function(e,file){imageUpload.addFile(file);}}});
 $(document).ready(function(){
