@@ -1,7 +1,7 @@
 @include('template.head')
 @include('template.nav')
 <section class="uploadImage">
-<h2 id="title">Image Upload - Drag & Drop</h2>
+<h2 id="title">AP Image Uploader</h2>
 {!!Form::open(['route'=>['store'],'files'=>true,'enctype'=>'multipart/form-data','class'=>'dropzone','id'=>'image-upload'])!!}
 <div class="dz-message">
 	<p>Paste, Drop or Select your Images here to Upload!</p>
