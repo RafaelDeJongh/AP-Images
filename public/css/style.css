@@ -24,13 +24,15 @@ body{
 	width:100%;
 	min-height:100%;
 	background-color:#222;
-	color:#eee}
+	color:#eee
+}
 /*Navigation
 -------------*/
 header{
 	display:block;
 	margin:auto;
-	padding:2em 5%}
+	padding:2em 5%
+}
 #home{
 	display:block;
 	border:none
@@ -71,7 +73,8 @@ nav{
 	display:flex;
 	align-items:center;
 	justify-content:flex-end;
-	font-size:1.2em}
+	font-size:1.2em
+}
 nav a{margin-left:4%;padding-bottom:.5em;border-bottom:3px solid rgba(0,0,0,0)}
 nav a:hover{border-bottom:3px solid #eee}
 nav a.active{border-bottom:3px solid #eee}
@@ -80,7 +83,8 @@ nav a.active:hover{border-color:#fff}
 -------------*/
 #title{
 	text-align:center;
-	margin-bottom:1em}
+	margin-bottom:1em
+}
 main{
 	position:relative;
 	margin:3em auto;
@@ -92,7 +96,8 @@ section{min-height:100%;height:auto}
 .uploadImage{padding-top:10vh}
 .uploadImgSec{
 	clear:both;
-	width:100%}
+	width:100%
+}
 .uploadImgSec:not(:first-child){
 	margin-top:1em;
 	padding-top:1em;
@@ -104,14 +109,16 @@ section{min-height:100%;height:auto}
 	height:26.66vw;
 	display:block;
 	border:none;
-	float:left}
+	float:left
+}
 .uploadedImages a img{
 	width:100%;
 	height:100%;
 	object-fit:cover;
 	-webkit-border-radius:8px;
 	   -moz-border-radius:8px;
-	        border-radius:8px}
+	        border-radius:8px
+}
 aside.urlInfo{
 	display:flex;
 	margin-left:3em;
@@ -121,7 +128,8 @@ aside.urlInfo{
 	flex-direction:column}
 aside .URLBox{
 	top:0;
-	margin-bottom:8px}
+	margin-bottom:8px
+}
 .URLBox h3{font-size:20px}
 .URLBox h3 .extlUrl{font-size:18px}
 .recentUploads{display:inline-block}
@@ -129,7 +137,8 @@ aside .URLBox{
 	float:left;
 	width:16.666%;
 	height:14.9vw;
-	border:none}
+	border:none
+}
 .recentUploads a img{
 	width:100%;
 	height:100%;
@@ -157,12 +166,14 @@ aside .URLBox{
 .dz-default.dz-message{margin:3em 0 2em}
 .dz-message p{
 	font-size:1.1em;
-	padding-top:6px}
+	padding-top:6px
+}
 .dz-message span{
 	color:#999;
 	font-size:.85em;
 	display:block;
-	margin-top:6px}
+	margin-top:6px
+}
 .dropzone .dz-preview .dz-image{
 	-webkit-border-radius:8px;
 	   -moz-border-radius:8px;
@@ -172,24 +183,28 @@ aside .URLBox{
 .fallback p{
 	margin:.5em 0;
 	color:#bbb;
-	font-size:.9em}
+	font-size:.9em
+}
 .fallback input{margin-top:.5em}
 /*Magnific Popup
 --------------*/
 .mfp-title{
 	padding:5px 0 0;
-	cursor:pointer}
+	cursor:pointer
+}
 .extlUrl{
 	margin:0 10px 0 5px;
 	border:none
 }
 img.mfp-img{
 	min-width:40vw;
-	object-fit:cover}
+	object-fit:cover
+}
 .URLBox{
 	display:inline;
 	position:relative;
-	top:-2px}
+	top:-2px
+}
 input.URLinfo{
 	width:15vmax;
 	min-width:200px;
@@ -208,7 +223,8 @@ input.URLinfo{
 	border-top-right-radius:0;
 	border-bottom-right-radius:0;
 	border-top-left-radius:3px;
-	border-bottom-left-radius:3px}
+	border-bottom-left-radius:3px
+}
 .mfp-figure:after{
 	box-shadow:none;
 	background:none
@@ -234,7 +250,8 @@ input.URLinfo{
 	border:none;
 	font-family:"FontAwesome";
 	color:#eee;
-	font-size:5em}
+	font-size:5em
+}
 .mfp-arrow-left:before{content:"\f104"}
 .mfp-arrow-right:before{content:"\f105"}
 .mfp-with-zoom .mfp-container,.mfp-with-zoom.mfp-bg{
@@ -243,7 +260,8 @@ input.URLinfo{
 	-webkit-transition:all .4s ease-out;
 	   -moz-transition:all .4s ease-out;
 		 -o-transition:all .4s ease-out;
-			transition:all .4s ease-out}
+			transition:all .4s ease-out
+}
 .mfp-with-zoom.mfp-ready .mfp-container{opacity:1}
 .mfp-with-zoom.mfp-ready.mfp-bg{opacity:.8}
 .mfp-with-zoom.mfp-removing .mfp-container,
@@ -281,19 +299,22 @@ input.URLinfo{
 input:focus{border-color:#900}
 .fallback input[type="submit"],.copyURL{
 	border-top-left-radius:0;
-	border-bottom-left-radius:0}
+	border-bottom-left-radius:0
+}
 ::-webkit-file-upload-button{font-size:1em}
 .fallback ::-webkit-file-upload-button{
 	border-top-right-radius:0;
 	border-bottom-right-radius:0;
-	padding-bottom:7px}
+	padding-bottom:7px
+}
 .fallback input[type="file"]{
 	background-color:#1f1f1f;
 	padding:0 20px 0 0;
 	margin-right:-5px;
 	width:25em;
 	border-top-left-radius:3px;
-	border-bottom-left-radius:3px}
+	border-bottom-left-radius:3px
+}
 /*Google Ads
 -------------*/
 .supportUS{
@@ -308,7 +329,8 @@ input:focus{border-color:#900}
 	text-align:center;
 	-webkit-border-radius:5px;
 	   -moz-border-radius:5px;
-	        border-radius:5px}
+	        border-radius:5px
+}
 .supportUS:before{
 	/*content:"Please support us by whitelisting our website in your AdBlocker!";
 	text-transform:capitalize;
@@ -335,7 +357,8 @@ input:focus{border-color:#900}
 	text-align:center;
 	position:relative;
 	top:50%;
-	transform:translateY(-50%)}
+	transform:translateY(-50%)
+}
 /*FadeInOnLoad
 ------------------*/
 @-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -354,7 +377,8 @@ input:focus{border-color:#900}
 	        animation-duration:.5s;
 	-webkit-animation-delay:2s;
 	   -moz-animation-delay:2s;
-	        animation-delay:2s}
+	        animation-delay:2s
+}
 /*Footer
 -------------*/
 footer{
@@ -362,7 +386,8 @@ footer{
 	width:100%;
 	height:auto;
 	padding:1em;
-	position:relative}
+	position:relative
+}
 /*MediaQueries
 ------------------*/
 @media screen and (min-width:1400px){
@@ -463,7 +488,8 @@ a,a:visited{
 	   -moz-transition:all .3s ease;
 	     -o-transition:all .3s ease;
 	        transition:all .3s ease;
-	border-bottom:1px solid #eee}
+	border-bottom:1px solid #eee
+}
 a:active,a:hover{
 	color:#fff;
 	border-color:#fff
