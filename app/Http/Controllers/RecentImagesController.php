@@ -15,4 +15,3 @@ class RecentImagesController extends Controller{
 	return view("recent-images-view")->with("files",$files);
 	}
 }
-
