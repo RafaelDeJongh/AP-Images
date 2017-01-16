@@ -23,5 +23,4 @@ class UploadController extends Controller{
 		}
 		return response()->json(['success'=>$imageName]);
 	}
-	public function dropzoneDelete(){}
 }

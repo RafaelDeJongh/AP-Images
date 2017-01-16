@@ -394,61 +394,62 @@ footer{
 	a.extlUrl{
 		display:inline-block;
 		margin:0;
-		text-align:center;
+		text-align:center
 	}
 	.mfp-title a.extlUrl{
 		top:-25px;
 		left:8px;
-		position:relative;
+		position:relative
 	}
 	.mfp-title .URLBox{top:-18px}
 	.URLBox{
 		display:block;
-		width:100%;
+		width:100%
 	}
 	.URLBox h3{margin-left:5px}
 	aside.urlInfo{
 		margin:0;
-		flex-wrap:wrap;
+		flex-wrap:wrap
 	}
 	input.URLinfo{
 		width:100%;
 		-webkit-border-radius:3px;
 		   -moz-border-radius:3px;
 		        border-radius:3px;
-		margin:0 5px 0;
+		margin:0 5px 0
 	}
 	button.copyURL{
 		width:100%;
 		-webkit-border-radius:3px;
 		   -moz-border-radius:3px;
 		        border-radius:3px;
-		margin:3px 5px;
+		margin:3px 5px
 	}
 	.mfp-title{
 		margin-top:0;
-		padding:0 10px 0 0;
+		padding:0 10px 0 0
 	}
 	.mfp-counter{
 		top:-24px;
 		right:8px;
-		text-shadow:1px 1px 0 rgba(0,0,0,.5);
+		text-shadow:1px 1px 0 rgba(0,0,0,.5)
 	}
 	input.URLinfo{min-width:auto}
 }
 @media screen and (max-width:420px){
 	#home{
 		margin:-5px auto 33px -50px;
-		text-align:center;
+		text-align:center
 	}
 	#home h1{
 		float:none;
 		top:0;
+		display:inline-block
 	}
 	nav{justify-content:center}
 	nav a{
 		font-size:1.3em;
-		display:inline-block;
+		display:inline-block
 	}
 	.uploadImage{padding:0}
 	main{margin:1.5em auto}
@@ -466,6 +467,26 @@ a,a:visited{
 a:active,a:hover{
 	color:#fff;
 	border-color:#fff
+}
+/*Error Pages
+-------------*/
+.errorPage{
+	margin:auto;
+	padding-top:5vmin;
+	text-align:center;
+	font-variant:small-caps
+}
+.errorPage h2{
+	font-size:30vmin;
+	margin:0
+}
+.errorPage h4{
+	font-size:4vmin;
+	margin:0 0 .8em
+}
+.errorPage p{
+	margin:.5em auto;
+	font-size:2.5vmin
 }
 /*Scrollbar
 -------------*/

@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,9 +10,10 @@
 |
 */
 //HomePage - Upload
-//Route::get('/',function(){return view('home');});
 Route::get('/','UploadController@dropzone');
 Route::post('store',['as'=>'store','uses'=>'UploadController@dropzoneStore']);
-//Route::delete('delete',['as'=>'delete','uses'=>'UploadController@dropzoneDelete']);
 //Recent Images
 Route::get('/recent','RecentImagesController@recentImages');
+//Error Pages
+Route::get('/404',function(){return view('errors/404');});
+Route::get('/500',function(){return view('errors/500');});
