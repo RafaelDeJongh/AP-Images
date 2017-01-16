@@ -91,7 +91,8 @@ main{
 	padding:0 5%;
 	width:100%;
 	min-height:calc(100% - 22em);
-	height:auto}
+	height:auto
+}
 section{min-height:100%;height:auto}
 .uploadImage{padding-top:10vh}
 .uploadImgSec{
@@ -125,7 +126,8 @@ aside.urlInfo{
 	align-items:center;
 	justify-content:center;
 	height:26.66vw;
-	flex-direction:column}
+	flex-direction:column
+}
 aside .URLBox{
 	top:0;
 	margin-bottom:8px
