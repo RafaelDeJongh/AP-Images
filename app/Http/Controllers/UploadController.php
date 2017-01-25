@@ -9,7 +9,7 @@ class UploadController extends Controller{
 	public function dropzone(){return view('dropzone-view');}
 	public function dropzoneStore(Request $request){
 		$image = $request->file('file');
-		$imageName = date("dHis-").preg_replace("/[^a-zA-Z0-9.]/","",$image->getClientOriginalName());
+		$imageName = date("dHis-").preg_replace("/[^a-zA-Z0-9.]+/","",$image->getClientOriginalName());
 		$uploadPath = public_path('up/').date("Y/m");
 		$image->move($uploadPath,$imageName);
 		//Thumbnail Creation
