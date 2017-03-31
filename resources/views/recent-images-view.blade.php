@@ -8,7 +8,7 @@
 	$thmPath=$files[$file]["dirname"]."/thumbs/thm_".$files[$file]["basename"];
 @endphp
 	<a href="{{$filePath}}" title="{{url('/')}}/{{$filePath}}" class="recImg"><img src="{{$thmPath}}" alt="{{$files[$file]['filename']}}"/></a>
-@if(++$file == 20) @break @endif
+@if($file == 19) @break @endif
 @endforeach
 </section>
 @include('template.footer')
